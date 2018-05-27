@@ -6,6 +6,7 @@ class ShoppingCartPage extends Page{
         super(driver);
         this.driver = driver;
     }
+    // Filling out basic info before proceeding to checkout
     async fillShippingForm(){
        let selectState = await super.dropdownSelection(shoppingCartSelectors.stateDropdown, 
                                                        shoppingCartSelectors.NewYork);

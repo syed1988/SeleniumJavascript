@@ -1,3 +1,4 @@
+// Selectors for shopping cart page
 module.exports = {
     stateDropdown: "#region_id",
     NewYork: "option[value='43']",

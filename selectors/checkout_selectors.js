@@ -1,3 +1,5 @@
+
+// Contains selectors for checkout page
 module.exports = {
     guestCheckout: "input[id='login:guest']",
     firstname: "input[id='billing:firstname']",

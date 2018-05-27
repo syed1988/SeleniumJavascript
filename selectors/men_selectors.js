@@ -1,3 +1,6 @@
+
+// Contains selectors for all of the men pages. For now, it only has 
+// selectors for new arrivals only.
 module.exports = {
     dropdown: "li[class='level0 nav-2 parent']",
     newArrivals: "li[class='level1 nav-2-1 first']",

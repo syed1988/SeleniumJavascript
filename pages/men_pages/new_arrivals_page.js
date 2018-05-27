@@ -6,12 +6,15 @@ class NewArrivals extends Page {
         super(driver);
         this.driver = driver;
     }
+    // Navigates to Men New Arrivals Page
     async goToNewArrivalsPage() {
         await super.hoverWithWait(menSelectors.dropdown);
         let newArrivals = await super.waitForElementVisibility(menSelectors.newArrivals);
         await newArrivals.click();
     }
-
+    // Selects blazer from Men New Arrival page, it is one of 3 items
+    // in that page. Could have abstracted this function to select any
+    // of the 3 item. 
     async selectBlazer() {
         let locators = {
             itemLocator: menSelectors.blazerItem,
@@ -22,10 +25,13 @@ class NewArrivals extends Page {
         }
         await this.selectItemWithColorAndSize(locators);
     }
-
+    // When adding an item to the cart, user can select how many items
+    // they want to add, this functionality provides that option.
     async selectQuanitity(quantity){
         await super.enterText(menSelectors.quantity, quantity);
     }
+    // After selecting an item and its size and color,
+    // user can proceed to the cart via this functionality. 
     async addToCart(){
         super.clickWithWait(menSelectors.addToCart);
     }

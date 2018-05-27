@@ -38,8 +38,8 @@ describe('Basic Tests', function(){
     })
 })
 
-describe('TESTING selenium demo site', function () {
-    this.timeout(25000);
+describe('Creating orders', function () {
+    this.timeout(50000);
     let driver = new webdriver.Builder()
             .forBrowser('chrome')
             .build();
@@ -57,7 +57,9 @@ describe('TESTING selenium demo site', function () {
         await page.deleteAllCookies();
         await page.quit();
     })
-    it('should return search result', async () => {
+    // An end to end test from selecting an item to adding it to cart
+    // to checkout out to placing the order and confirming it has been placed.
+    it('users should be able to submit a order', async () => {
         //navigate to Men Arrival Page
         await menNewArrivals.goToNewArrivalsPage();
         let newArrivalsTitle = await driver.getTitle();
